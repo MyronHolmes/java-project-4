@@ -26,12 +26,12 @@ public void addNote(@RequestBody NoteDto noteDto, @PathVariable Long userId){
 }
 
 @DeleteMapping("/{noteId}")
-public void deleteNotebyId(@PathVariable Long noteId){
+public void deleteNoteById(@PathVariable Long noteId){
     noteService.deleteNoteById(noteId);
 }
 
-@PutMapping()
-public void updateNote(@PathVariable NoteDto  noteDto){
+@PutMapping
+public void updateNote(@RequestBody NoteDto  noteDto){
     noteService.updateNoteById(noteDto);
 }
 
